@@ -1,0 +1,283 @@
+Windows: Control Panel, Computer Management
+Punkte kokku12 / 20-st
+ 
+"5" - 19-20
+"4" - 17-18
+"3" - 14-16
+"2" - <13
+0 punkt(i) 3-st
+ 
+Selgita mis on operatsioonisüsteem *
+··· / 1-st
+посредник между человеком и компьютером
+Nimi, perekonnanimi *
+Martin Nugis
+ 
+Selgita mis on graafika liides (GUI) *
+··· / 1-st
+графический интрерфейс
+ 
+Selgita mis on Windows juhtpaneeli (Control Panel) ja arvutihalduse (Computer Management) vahe *
+··· / 1-st
+там находятся различные настройки и функции для графики  
+Computer management
+5 punkt(i) 9-st
+ 
+
+Kuvab kõik süsteemi taustateenused. Siit saab neid käivitada, peatada või seadistada, kas teenus käivitub automaatselt või käsitsi.
+
+*
+0/1
+Task Scheduler
+Event Viewer
+ 
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+Disk Management
+Services
+WMI Control
+ 
+
+Windows Management Instrumentation haldus. Võimaldab kontrollida süsteemipõhiseid haldusliideseid, teha diagnostikat ja määrata õigusi.
+*
+0/1
+Task Scheduler
+Event Viewer
+ 
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+Disk Management
+Services
+WMI Control
+ 
+
+Annab ülevaate arvuti ressursikasutusest (protsessor, mälu, ketas, võrk). Saab jälgida ja lisada jõudlusloendureid.
+
+*
+1/1
+Task Scheduler
+Event Viewer
+Shared Folders
+Local Users and Groups
+Performance
+ 
+Device Manager
+Disk Management
+Services
+WMI Control
+ 
+
+Võimaldab luua, muuta ja kustutada kasutajakontosid ning rühmi. Saab määrata paroolid ja kasutajate õigused.
+
+*
+1/1
+Task Scheduler
+Event Viewer
+Shared Folders
+Local Users and Groups
+ 
+Performance
+Device Manager
+Disk Management
+Services
+WMI Control
+ 
+
+Võimaldab luua ja hallata automaatseid ülesandeid, mis käivituvad kindlal ajal või kindla sündmuse peale (nt programmi avamine, skripti käivitamine).
+
+*
+1/1
+Task Scheduler (Ülesannete ajastaja)
+ 
+Event Viewer (Sündmuste vaatur)
+Shared Folders (Jagatud kaustad)
+Local Users and Groups (Kohalikud kasutajad ja rühmad)
+Performance (Jõudlus)
+Device Manager (Seadmehaldur)
+Disk Management (Kettahaldus)
+Services (Teenused)
+WMI Control (WMI juhtimine)
+ 
+
+Võimaldab hallata kettaid ja partitsioone: luua, kustutada, suurust muuta, draivitähte muuta, uusi mahtusid luua ja kettaid lähtestada.
+*
+1/1
+Task Scheduler
+Event Viewer
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+Disk Management
+ 
+Services
+WMI Control
+ 
+
+Kuvab kõik võrgus jagatud kaustad, avatud seansid ja aktiivsed failid. Siit saab hallata, kes millele ligi pääseb.
+
+*
+0/1
+Task Scheduler
+Event Viewer
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+ 
+Disk Management
+Services
+WMI Control
+ 
+
+Näitab süsteemi, rakenduste ja turvalisuse logisid. Kasutatakse probleemide tuvastamiseks ja veaotsinguks.
+
+*
+1/1
+Task Scheduler
+Event Viewer
+ 
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+Disk Management
+Services
+WMI Control
+ 
+
+Näitab kogu arvutisse paigaldatud riistvara. Siit saab seadmeid lubada/keelata, värskendada draivereid ja kontrollida vigasid.
+*
+0/1
+Task Scheduler
+Event Viewer
+Shared Folders
+Local Users and Groups
+Performance
+Device Manager
+Disk Management
+Services
+ 
+WMI Control
+Control Panel
+7 punkt(i) 8-st
+ 
+
+Võimaldab hallata võrguühendusi, muuta võrgu sätteid, seadistada jagamist ja vaadata võrgu olekut. Siit pääseb ka Network and Sharing Center’isse.
+*
+1/1
+System and Security
+Network and Internet
+ 
+Hardware and Sound
+Programs
+User Accounts
+Appearance and Personalization
+Clock and Region
+Ease of Access
+ 
+
+Siin saab muuta töölaua taustapilti, ekraanisäästjat, tegumiriba ja menüü Start välimust ning fondivalikut.
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+Programs
+User Accounts
+Appearance and Personalization
+ 
+Clock and Region
+Ease of Access
+ 
+
+Sisaldab seadmehaldust ja draiverite sätteid, printerite ja skannerite lisamist, heli seadeid ning energiaplaanide haldamist.
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+ 
+Programs
+User Accounts
+Appearance and Personalization
+Clock and Region
+Ease of Access
+ 
+
+Sisaldab tööriistu arvuti seisundi kontrollimiseks, tulemüüri ja süsteemivärskenduste seadistamiseks, varundamiseks ja taastamiseks. Siit saab ka hallata energiasätteid.
+*
+0/1
+System and Security (Süsteem ja turve)
+Network and Internet (Võrk ja internet)
+Hardware and Sound (Riistvara ja heli)
+Programs (Programmid)
+User Accounts (Kasutajakontod)
+Appearance and Personalization (Välimus ja isikupärastamine)
+ 
+Clock and Region (Kell ja piirkond)
+Ease of Access (Hõlbustus)
+ 
+
+Lubab paigaldatud programme desinstallida või muuta, samuti sisse/välja lülitada Windowsi lisakomponente (Windows features).
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+Programs
+ 
+User Accounts
+Appearance and Personalization
+Clock and Region
+Ease of Access
+ 
+
+Võimaldab hallata kohalikke kasutajakontosid: luua uusi, muuta kontotüüpe (nt administraator/standardkasutaja), muuta paroole ja seadistada sisselogimist.
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+Programs
+User Accounts
+ 
+Appearance and Personalization
+Clock and Region
+Ease of Access
+ 
+
+Võimaldab muuta kuupäeva, kellaaja ja ajavööndi sätteid, lisada täiendavaid kellasid ning muuta piirkonna ja kuupäevade/numbrite formaati.
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+Programs
+User Accounts
+Appearance and Personalization
+Clock and Region
+ 
+Ease of Access
+ 
+
+Sisaldab ligipääsetavuse tööriistu: ekraanilugeja (Narrator), suurendusklaas, ekraaniklaviatuur, kõrge kontrastsuse režiim. Aitab kohandada Windowsi erivajadustega kasutajatele.
+*
+1/1
+System and Security
+Network and Internet
+Hardware and Sound
+Programs
+User Accounts
+Appearance and Personalization
+Clock and Region
+Ease of Access
+ 
+Google pole seda sisu loonud ega heaks kiitnud. - Teenusetingimused - Privaatsuseeskirjad
+
+Kas see vorm tundub kahtlane? Aruanne
+Google Vormid
