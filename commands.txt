@@ -1,0 +1,66 @@
+# === PowerShell Lab Script (универсальный, без ошибок доступа) ===
+
+$base = "$env:USERPROFILE\Documents\PowerShell_Lab"
+$files = "$base\Files"
+$reports = "$base\Reports"
+
+# создаём папки
+New-Item -Path $files -ItemType Directory -Force | Out-Null
+New-Item -Path $reports -ItemType Directory -Force | Out-Null
+
+# шаг 1 — инфо о системе
+$PSVersionTable | Out-File "$files\ps_version.txt"
+Get-Location | Out-File "$files\location.txt"
+
+# шаг 2 — политика выполнения
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+Get-ExecutionPolicy -List | Out-File "$files\policy.txt"
+
+# шаг 3 — помощь и команды
+Get-Command -Verb Get | Out-File "$files\get_commands.txt"
+Get-Help Get-Service -Examples | Out-File "$files\get_service_help.txt"
+
+# шаг 4 — навигация и файловая система
+New-Item "$base\LAB\A\B\C" -ItemType Directory -Force | Out-Null
+Get-ChildItem "$base\LAB" | Out-File "$files\lab_list.txt"
+
+# шаг 5 — работа с файлами
+Set-Content "$files\readme.txt" "Первая строка`nВторая строка`nТретья строка"
+(Get-Content "$files\readme.txt")[1] | Out-File "$files\readme_second_line.txt"
+Add-Content "$files\readme.txt" "`nЧетвёртая строка"
+
+# шаг 6 — переменные
+$today = Get-Date
+"Сегодня: $today" | Out-File "$files\today.txt"
+$a=5; $b=7; $sum=$a+$b; "Сумма: $sum" | Out-File "$files\sum.txt"
+
+# шаг 7 — алиасы
+Get-Alias ls | Out-File "$files\aliases.txt"
+
+# шаг 8 — Select-Object
+Get-Service | Select-Object -First 5 Name,Status | Out-File "$files\services_select.txt"
+
+# шаг 9 — Where-Object
+Get-Service | Where-Object Status -eq 'Running' | Select-Object -First 5 Name,Status | Out-File "$files\running_services.txt"
+
+# шаг 10 — Sort-Object
+Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Name,Id,CPU | Out-File "$files\top_cpu_processes.txt"
+
+# шаг 11 — Export-Csv
+Get-Service | Select-Object Name,Status | Export-Csv "$files\services.csv" -NoTypeInformation -Encoding UTF8
+
+# шаг 12 — Import-Csv
+Import-Csv "$files\services.csv" | Where-Object Status -eq 'Stopped' | Out-File "$files\stopped_services.txt"
+
+# шаг 13 — Get-ChildItem -Recurse
+Get-ChildItem $base -Recurse -File | Out-File "$files\all_files.txt"
+
+# шаг 14 — Group-Object
+Get-Service | Group-Object Status | Select Name,Count | Out-File "$files\services_grouped.txt"
+
+# шаг 15 — Measure-Object
+Get-ChildItem $base -Recurse -File | Measure-Object Length -Sum -Average -Maximum | Out-File "$files\measure.txt"
+
+# финальное сообщение
+"✅ Все шаги PowerShell Lab успешно выполнены!" | Out-File "$reports\final_report.txt"
+Write-Host "Все готово! Файлы смотри в: $base"

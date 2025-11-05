@@ -1,0 +1,10 @@
+
+$folder = "$env:USERPROFILE\Desktop\PowerShell_Lab 1.1"
+
+
+New-Item -Path $folder -ItemType Directory -Force | Out-Null
+
+
+New-Item -Path "$folder\example.txt" -ItemType File -Force | Out-Null
+
+Write-Host "✅ Файл example.txt создан в $folder"

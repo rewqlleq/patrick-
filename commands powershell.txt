@@ -1,0 +1,100 @@
+PowerShell Lab Cheat Sheet (ISE x86)
+
+=======================
+Шаг 1. Структура проекта
+Команды:
+$base = "$env:USERPROFILE\Desktop\PowerShell_Lab 1.1"
+$files = "$base\Files"
+$reports = "$base\Reports"
+New-Item -Path $files -ItemType Directory -Force
+New-Item -Path $reports -ItemType Directory -Force
+
+Описание: создаёт папки для файлов и отчётов.
+
+=======================
+Шаг 2. Информация о системе
+Команды:
+Get-ComputerInfo | Out-File "$files\system_info.txt"
+$PSVersionTable | Out-File "$files\ps_version.txt"
+Get-Location | Out-File "$files\location.txt"
+
+Описание: собирает системные данные и версию PowerShell.
+
+=======================
+Шаг 3. Политики и ExecutionPolicy
+Команды:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+Get-ExecutionPolicy -List | Out-File "$files\policy.txt"
+
+Описание: разрешает запуск локальных скриптов, выводит текущие политики.
+
+=======================
+Шаг 4. Пользователи и группы
+Команды:
+Get-LocalUser | Out-File "$files\users.txt"
+Get-LocalGroup | Out-File "$files\groups.txt"
+
+Описание: список локальных пользователей и групп.
+
+=======================
+Шаг 5. Работа с файлами
+Команды:
+Set-Content "$files\readme.txt" "Строка1`nСтрока2`nСтрока3"
+Add-Content "$files\readme.txt" "`nСтрока4"
+(Get-Content "$files\readme.txt")[1] | Out-File "$files\readme_second_line.txt"
+
+Описание: создание и редактирование текстовых файлов.
+
+=======================
+Шаг 6. Переменные и арифметика
+Команды:
+$today = Get-Date
+$a=5; $b=7; $sum=$a+$b
+
+Описание: работа с переменными и вычисления.
+
+=======================
+Шаг 7. Алиасы и команды
+Команды:
+Get-Alias ls
+Get-Command -Verb Get | Out-File "$files\get_commands.txt"
+Get-Help Get-Service -Examples | Out-File "$files\get_service_help.txt"
+
+Описание: просмотр сокращений команд и примеров использования.
+
+=======================
+Шаг 8. Сервисы и процессы
+Команды:
+Get-Service | Export-Csv "$files\services.csv" -NoTypeInformation
+Get-Process | Export-Csv "$files\procs.csv" -NoTypeInformation
+Get-Service | Where-Object Status -eq 'Running' | Select Name,Status
+Get-Process | Sort-Object CPU -Descending | Select -First 5 Name,Id,CPU
+
+Описание: сбор информации о сервисах и процессах, фильтрация и сортировка.
+
+=======================
+Шаг 9. Работа с CSV и группировка
+Команды:
+Import-Csv "$files\services.csv" | Where-Object Status -eq 'Stopped'
+Get-Service | Group-Object Status | Select Name,Count
+
+Описание: фильтрация и группировка объектов.
+
+=======================
+Шаг 10. Архивация и отчёт
+Команды:
+Compress-Archive -Path "$files*" -DestinationPath "$reports\FilesBackup.zip" -Force
+"Лабораторная выполнена!" | Out-File "$reports\final_report.txt"
+
+Описание: создание архива и итогового отчёта.
+
+=======================
+Шаг 11-15. Дополнительно (ISE):
+
+* Просмотр сетевых параметров: Get-NetIPAddress, Get-NetRoute
+* Просмотр журналов: Get-EventLog
+* Планировщик задач: Get-ScheduledTask
+* Модули PowerShell: Get-Module -ListAvailable
+* Измерение объектов: Measure-Object (Sum, Average, Maximum)
+
+Описание: шаги для полного сбора информации и подготовки отчётов для лабораторной.

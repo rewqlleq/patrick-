@@ -1,0 +1,14 @@
+$base = "$env:USERPROFILE\Desktop\PowerShell_Lab 1.1"
+
+
+New-Item -Path $base -ItemType Directory -Force | Out-Null
+
+
+Write-Host " Папка создана на рабочем столе: $base"
+ Папка создана на рабочем столе: C:\Users\opilane\Desktop\PowerShell_Lab 1.1 
+
+Информация о системе
+Команды:
+Get-ComputerInfo | Out-File "$files\system_info.txt"
+$PSVersionTable | Out-File "$files\ps_version.txt"
+Get-Location | Out-File "$files\location.txt"
